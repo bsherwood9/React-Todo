@@ -4,9 +4,20 @@ import React from "react";
 
 import Todo from "./Todo";
 const TodoList = props => {
-  return props.todoList.map(item => (
-    <Todo item={item} key={item.id} toggleTodo={props.toggleTodo} />
-  ));
+  console.log("search", props.todoList);
+  if (!props.searchTerm) {
+    return props.todoList.map(item => (
+      <Todo item={item} key={item.id} toggleTodo={props.toggleTodo} />
+    ));
+  } else {
+    return props.todoList
+      .filter(item =>
+        item.task.toLowerCase().includes(props.searchTerm.toLowerCase())
+      )
+      .map(item => (
+        <Todo item={item} key={item.id} toggleTodo={props.toggleTodo} />
+      ));
+  }
 };
 
 export default TodoList;
