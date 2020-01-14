@@ -4,11 +4,12 @@ import React from "react";
 
 import Todo from "./Todo";
 const TodoList = props => {
-  console.log("search", props.todoList);
   if (!props.searchTerm) {
-    return props.todoList.map(item => (
-      <Todo item={item} key={item.id} toggleTodo={props.toggleTodo} />
-    ));
+    return props.todoList.map(item => {
+      if (item.task) {
+        return <Todo item={item} key={item.id} toggleTodo={props.toggleTodo} />;
+      }
+    });
   } else {
     return props.todoList
       .filter(item =>

@@ -1,3 +1,10 @@
 .status {
   text-decoration: line-through;
 }
+
+.item {
+  width: 80%;
+  background: #c0e0de;
+  margin: 10px auto;
+  text-align: center;
+}

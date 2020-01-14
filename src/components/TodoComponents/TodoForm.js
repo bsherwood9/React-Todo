@@ -1,4 +1,5 @@
 import React from "react";
+import "../../App.css";
 
 class TodoForm extends React.Component {
   constructor(props) {
@@ -20,17 +21,19 @@ class TodoForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.submitHandler}>
-        <label htmlFor="todo">Todo Entry:</label>
+      <form onSubmit={this.submitHandler} className="form-set">
         <input
           name="todo"
           type="text"
           value={this.state.task}
           onChange={this.changeHandler}
           placeholder="Add a TODO here..."
+          className="todoBar"
         />
-        <button type="submit">Add</button>
-        <button onClick={this.props.filterTodos}>Clear Complete</button>
+        <div className="buttonBox">
+          <button type="submit">Add</button>
+          <button onClick={this.props.filterTodos}>Clear Complete</button>
+        </div>
       </form>
     );
   }

@@ -1,0 +1,35 @@
+.container {
+  background: #5f87b3;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  min-width: 400px;
+  margin: 0 auto;
+}
+.title {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: white;
+}
+.form-set {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonBox {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonBox button {
+  width: 30%;
+}
+
+.todoBar {
+  width: 80%;
+  margin: 0 auto;
+}
+.search {
+  margin: 0 auto;
+}
