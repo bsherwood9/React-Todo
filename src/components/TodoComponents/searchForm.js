@@ -4,12 +4,11 @@ const SearchForm = props => {
   return (
     <div>
       <form>
-        <label htmlFor="search">Search:</label>
         <input
           name="search"
           type="text"
           value={props.searchTerm}
-          placeholder="Search characters..."
+          placeholder="Search todos..."
           onChange={props.handleSearch}
         ></input>
       </form>

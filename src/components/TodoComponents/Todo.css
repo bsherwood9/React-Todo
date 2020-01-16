@@ -3,8 +3,10 @@
 }
 
 .item {
-  width: 80%;
+  width: 40%;
   background: #c0e0de;
   margin: 10px auto;
   text-align: center;
+  overflow-wrap: break-word;
+  border-radius: 8px;
 }

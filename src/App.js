@@ -77,11 +77,13 @@ class App extends React.Component {
     return (
       <div className="container">
         <h1 className="title">TODOS</h1>
-        <TodoList
-          todoList={this.state.todoList}
-          toggleTodo={this.toggleTodo}
-          searchTerm={this.state.searchTerm}
-        />
+        <div className="todoBox">
+          <TodoList
+            todoList={this.state.todoList}
+            toggleTodo={this.toggleTodo}
+            searchTerm={this.state.searchTerm}
+          />
+        </div>
         <TodoForm addTodo={this.addTodo} filterTodos={this.filterTodos} />
         <div className="search">
           <SearchForm
